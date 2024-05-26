@@ -16,7 +16,7 @@ const SuraList = () => {
       <IonList lines="full">
         {quran.sura.map((sura) => (
           <>
-            <SuraListItem sura={sura.name} key={sura.name} />
+            <SuraListItem sura={sura} key={sura.name} />
           </>
         ))}
       </IonList>{' '}

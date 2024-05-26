@@ -1,21 +1,6 @@
 import React, { createContext, useState } from 'react';
 import QuranJsonData from '../assets/db/quran-json-min.json';
-
-interface Ayah {
-  index: string;
-  text: string;
-  bismillah?: string;
-}
-
-interface Sura {
-  name: string;
-  index: string;
-  aya: Ayah[];
-}
-
-interface Quran {
-  sura: Sura[];
-}
+import { Quran } from '../utils/types';
 
 interface UserContextType {
   quran: Quran;
