@@ -5,24 +5,17 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
-  IonItem,
-  IonLabel,
-  IonList,
   IonButton,
   IonButtons,
   IonIcon,
 } from '@ionic/react';
 import {
-  create,
   ellipsisHorizontal,
   ellipsisVertical,
-  helpCircle,
   search,
   personCircle,
-  star,
 } from 'ionicons/icons';
 import SuraList from '../components/SuraList';
-import SuraListItem from '../components/SuraListItem';
 import SuraListHeader from '../components/SuraListHeader';
 
 const IndexPage = () => {
