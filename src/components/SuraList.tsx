@@ -1,7 +1,7 @@
 import { IonItem, IonLabel, IonList } from '@ionic/react';
 import React, { useContext } from 'react';
 import SuraListItem from './SuraListItem';
-import { QuranContext } from '../hooks/contextProvider';
+import { QuranContext } from '../hooks/QuranProvider';
 const SuraList = () => {
   const context = useContext(QuranContext);
 

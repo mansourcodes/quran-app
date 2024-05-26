@@ -23,7 +23,7 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import IndexPage from './pages/Index';
 import SuraPage from './pages/Sura';
-import { QuranProvider } from './hooks/contextProvider';
+import { QuranProvider } from './hooks/QuranProvider';
 
 setupIonicReact();
 
