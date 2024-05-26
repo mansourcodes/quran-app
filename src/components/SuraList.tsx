@@ -13,13 +13,11 @@ const SuraList = () => {
 
   return (
     <>
-      <IonList lines="full">
-        {quran.sura.map((sura) => (
-          <>
-            <SuraListItem sura={sura} key={sura.name} />
-          </>
-        ))}
-      </IonList>{' '}
+      {quran.sura.map((sura) => (
+        <>
+          <SuraListItem sura={sura} key={sura.name} />
+        </>
+      ))}
     </>
   );
 };

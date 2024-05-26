@@ -35,25 +35,23 @@ const SuraPage: React.FC<SuraPageProps> = ({ match }) => {
   const sura = quran.sura.find((sura) => sura.index === match.params.id);
 
   return (
-    <>
-      <IonPage>
-        <IonHeader translucent={true}>
-          <IonToolbar>
-            <IonButtons slot="primary">
-              <IonButton>
-                <IonIcon slot="icon-only" icon={ellipsisVertical}></IonIcon>
-              </IonButton>
-            </IonButtons>
-            <IonTitle>Quran</IonTitle>
-          </IonToolbar>
-        </IonHeader>
+    <IonPage>
+      <IonHeader translucent={true} class="no-shadow">
+        <IonToolbar>
+          <IonButtons slot="primary">
+            <IonButton>
+              <IonIcon slot="icon-only" icon={ellipsisVertical}></IonIcon>
+            </IonButton>
+          </IonButtons>
+          <IonTitle>Quran</IonTitle>
+        </IonToolbar>
+      </IonHeader>
 
-        <IonContent fullscreen={true}>
-          {sura && <AyahListHeader suraName={sura?.name} />}
-          {sura && <AyahList ayah={sura?.aya} />}{' '}
-        </IonContent>
-      </IonPage>
-    </>
+      <IonContent fullscreen={true}>
+        {sura && <AyahListHeader suraName={sura?.name} />}
+        {sura && <AyahList ayah={sura?.aya} />}{' '}
+      </IonContent>
+    </IonPage>
   );
 };
 

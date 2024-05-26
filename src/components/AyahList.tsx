@@ -1,6 +1,7 @@
 import React from 'react';
 import AyahListItem from './AyahListItem';
 import { Ayah } from '../utils/types';
+import { IonList } from '@ionic/react';
 
 const AyahList = ({ ayah }: { ayah: Ayah[] | undefined }) => {
   return (

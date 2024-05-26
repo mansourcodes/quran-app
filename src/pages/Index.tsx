@@ -21,7 +21,7 @@ import SuraListHeader from '../components/SuraListHeader';
 const IndexPage = () => {
   return (
     <IonPage>
-      <IonHeader translucent={true}>
+      <IonHeader translucent={true} class="no-shadow">
         <IonToolbar>
           <IonButtons slot="secondary">
             <IonButton>
@@ -41,7 +41,7 @@ const IndexPage = () => {
         <SuraListHeader />
       </IonHeader>
 
-      <IonContent fullscreen={true}>
+      <IonContent className="p-0 m-0">
         <SuraList />
       </IonContent>
     </IonPage>
