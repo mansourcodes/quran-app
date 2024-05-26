@@ -33,11 +33,7 @@ const IndexPage = () => {
           </IonButtons>
           <IonButtons slot="primary">
             <IonButton>
-              <IonIcon
-                slot="icon-only"
-                ios={ellipsisHorizontal}
-                md={ellipsisVertical}
-              ></IonIcon>
+              <IonIcon slot="icon-only" icon={ellipsisVertical}></IonIcon>
             </IonButton>
           </IonButtons>
           <IonTitle>Quran</IonTitle>

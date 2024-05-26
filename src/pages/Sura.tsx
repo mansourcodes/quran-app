@@ -1,8 +1,20 @@
 import React, { useContext } from 'react';
+import {
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+  IonButton,
+  IonButtons,
+  IonIcon,
+} from '@ionic/react';
 import { RouteComponentProps } from 'react-router';
 import AyahList from '../components/AyahList';
 import { QuranContext } from '../hooks/QuranProvider';
 import AyahListHeader from '../components/AyahListHeader';
+import SuraListHeader from '../components/SuraListHeader';
+import { ellipsisHorizontal, ellipsisVertical } from 'ionicons/icons';
 
 interface SuraPageProps
   extends RouteComponentProps<{
@@ -24,9 +36,24 @@ const SuraPage: React.FC<SuraPageProps> = ({ match }) => {
 
   return (
     <>
-      <div>sura index {match.params.id}</div>
-      {sura && <AyahListHeader suraName={sura?.name} />}
-      {sura && <AyahList ayah={sura?.aya} />}
+      <IonPage>
+        <IonHeader translucent={true}>
+          <IonToolbar>
+            <IonButtons slot="primary">
+              <IonButton>
+                <IonIcon slot="icon-only" icon={ellipsisVertical}></IonIcon>
+              </IonButton>
+            </IonButtons>
+            <IonTitle>Quran</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+
+        <IonContent fullscreen={true}>
+          <div>sura index {match.params.id}</div>
+          {sura && <AyahListHeader suraName={sura?.name} />}
+          {sura && <AyahList ayah={sura?.aya} />}{' '}
+        </IonContent>
+      </IonPage>
     </>
   );
 };
