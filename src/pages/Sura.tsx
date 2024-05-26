@@ -49,7 +49,6 @@ const SuraPage: React.FC<SuraPageProps> = ({ match }) => {
         </IonHeader>
 
         <IonContent fullscreen={true}>
-          <div>sura index {match.params.id}</div>
           {sura && <AyahListHeader suraName={sura?.name} />}
           {sura && <AyahList ayah={sura?.aya} />}{' '}
         </IonContent>

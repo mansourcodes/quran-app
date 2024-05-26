@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const SuraListItem = ({ sura }: { sura: Sura }) => {
   return (
     <>
-      <Link to="/sura/1">
+      <Link to={'/sura/' + sura.index}>
         <div className="w-full flex flex-row items-start justify-start text-center">
           <div className="bg-blue-500 w-[40px] py-2 ">B</div>
 
