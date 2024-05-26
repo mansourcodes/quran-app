@@ -1,7 +1,7 @@
 import React from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 
-const Home: React.FC = () => {
+const IndexPage = () => {
   return (
     <IonPage>
       <IonHeader>
@@ -20,4 +20,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default IndexPage;
