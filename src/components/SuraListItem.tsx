@@ -1,6 +1,6 @@
 import { IonItem, IonLabel } from '@ionic/react';
 import React from 'react';
-const SuraListItem = () => {
+const SuraListItem = ({ sura }: { sura: string }) => {
   return (
     <>
       <div className="w-full flex flex-row items-start justify-start text-center">
@@ -8,7 +8,7 @@ const SuraListItem = () => {
 
         <div className="w-full py-2 bg-orange-100 flex flex-row items-center justify-between">
           <div className="bg-red-500">1</div>
-          <div className="bg-green-500">alkawther</div>
+          <div className="bg-green-500">{sura}</div>
           <div className="bg-red-500">1</div>
         </div>
       </div>

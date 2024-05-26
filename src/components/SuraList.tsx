@@ -10,17 +10,15 @@ const SuraList = () => {
   }
 
   const { quran } = context;
-  console.log(quran);
+  console.log(quran.sura);
   return (
     <>
       <IonList lines="full">
-        {Array(80)
-          .fill(0)
-          .map((i) => (
-            <>
-              <SuraListItem />
-            </>
-          ))}
+        {quran.sura.map((sura) => (
+          <>
+            <SuraListItem sura={sura.name} key={sura.name} />
+          </>
+        ))}
       </IonList>{' '}
     </>
   );
