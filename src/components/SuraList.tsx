@@ -10,7 +10,7 @@ const SuraList = () => {
   }
 
   const { quran } = context;
-  console.log(quran.sura);
+
   return (
     <>
       <IonList lines="full">

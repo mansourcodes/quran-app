@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, Route } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
@@ -31,17 +31,13 @@ const App: React.FC = () => (
   <QuranProvider>
     <IonApp>
       <IonReactRouter>
-        <IonRouterOutlet>
-          <Route exact path="/index">
-            <IndexPage />
-          </Route>
-          <Route exact path="/sura">
-            <SuraPage />
-          </Route>
+        <Switch>
+          <Route exact path="/index" component={IndexPage} />
+          <Route exact path="/sura/:id" component={SuraPage} />
           <Route exact path="/">
             <Redirect to="/index" />
           </Route>
-        </IonRouterOutlet>
+        </Switch>
       </IonReactRouter>
     </IonApp>
   </QuranProvider>
