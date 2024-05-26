@@ -1,4 +1,3 @@
-import { IonItem, IonLabel } from '@ionic/react';
 import React from 'react';
 import { Sura } from '../utils/types';
 const SuraListItem = ({ sura }: { sura: Sura }) => {

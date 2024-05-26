@@ -1,4 +1,4 @@
-import { IonIcon, IonItem, IonLabel } from '@ionic/react';
+import { IonIcon } from '@ionic/react';
 import React from 'react';
 import { bookmark } from 'ionicons/icons';
 const SuraListHeader = () => {

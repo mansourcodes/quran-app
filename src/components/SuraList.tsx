@@ -1,4 +1,4 @@
-import { IonItem, IonLabel, IonList } from '@ionic/react';
+import { IonList } from '@ionic/react';
 import React, { useContext } from 'react';
 import SuraListItem from './SuraListItem';
 import { QuranContext } from '../hooks/QuranProvider';
