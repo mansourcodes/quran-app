@@ -1,7 +1,16 @@
 import { IonItem, IonLabel, IonList } from '@ionic/react';
-import React from 'react';
+import React, { useContext } from 'react';
 import SuraListItem from './SuraListItem';
+import { QuranContext } from '../hooks/contextProvider';
 const SuraList = () => {
+  const context = useContext(QuranContext);
+
+  if (!context) {
+    throw new Error('SuraList must be used within a QuranProvider');
+  }
+
+  const { quran } = context;
+  console.log(quran);
   return (
     <>
       <IonList lines="full">

@@ -23,25 +23,28 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import IndexPage from './pages/Index';
 import SuraPage from './pages/Sura';
+import { QuranProvider } from './hooks/contextProvider';
 
 setupIonicReact();
 
 const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/index">
-          <IndexPage />
-        </Route>
-        <Route exact path="/sura">
-          <SuraPage />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/index" />
-        </Route>
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
+  <QuranProvider>
+    <IonApp>
+      <IonReactRouter>
+        <IonRouterOutlet>
+          <Route exact path="/index">
+            <IndexPage />
+          </Route>
+          <Route exact path="/sura">
+            <SuraPage />
+          </Route>
+          <Route exact path="/">
+            <Redirect to="/index" />
+          </Route>
+        </IonRouterOutlet>
+      </IonReactRouter>
+    </IonApp>
+  </QuranProvider>
 );
 
 export default App;
